@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<script src="file:///android_asset/app.js"></script>
+
+  <!-- Sloppy Image Preloader -->
+  <script type="text/javascript">
+var my_image0 = new Image();
+var my_image1 = new Image();
+var my_image2 = new Image();
+var my_image3 = new Image();
+my_image0.src = "0.png";
+my_image1.src = "1.png";
+my_image2.src = "2.png";
+my_image3.src = "3.png";
+</script>
+
+    <!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="css/swiper.css">
+<link rel="stylesheet" href="btn.css">
+    <!-- Demo styles -->
+
+</head>
+<body onload="hidePro()">
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(0.png)"></div>
+            <div class="swiper-slide" style="background-image:url(1.png)"></div>
+            <div class="swiper-slide" style="background-image:url(2.png)"></div>
+            <div class="swiper-slide" style="background-image:url(3.png)"><div class="btmCent"><center><button type="button" class="btn btn-warning" onclick="enterApp()">OK, Lets Go...</button></center></div></div>
+
+        </div>
+
+
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        free: 'true',
+        effect: 'slide'
+        
+    });
+
+ function hidePro() {
+     app.HideProgress();
+ }
+
+ function enterApp() {    
+     app.Execute('endSlide()' );
+ }
+
+    </script>
+</body>
+</html>
